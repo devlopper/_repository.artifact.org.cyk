@@ -38,12 +38,12 @@
 		<maven.surefire.version>2.3</maven.surefire.version>
 		
 		<!-- Local Repository -->
-		<cyk.artifact.repository.local.id>local</cyk.artifact.repository.local.id>
+		<cyk.artifact.repository.local.id>localrep</cyk.artifact.repository.local.id>
 		<cyk.artifact.repository.local.name>CYK Local Artifact Repository</cyk.artifact.repository.local.name>
 		<cyk.artifact.repository.local.url>file://${user.home}\.m2\_local\_cyk</cyk.artifact.repository.local.url>
 		
 		<!-- Remote Repository -->
-		<cyk.artifact.repository.remote.id>remote</cyk.artifact.repository.remote.id>
+		<cyk.artifact.repository.remote.id>remoterep</cyk.artifact.repository.remote.id>
 		<cyk.artifact.repository.remote.name>CYK Remote Artifact Repository</cyk.artifact.repository.remote.name>
 		<cyk.artifact.repository.remote.url>https://github.com/devlopper/_repository.artifact.org.cyk.git</cyk.artifact.repository.remote.url>
 		
@@ -169,6 +169,7 @@
 			<dependency>
 				<groupId>org.jboss.arquillian.junit</groupId>
 				<artifactId>arquillian-junit-container</artifactId>
+				<version>1.1.2.Final</version>
 				<scope>test</scope>
 			</dependency>
 			
