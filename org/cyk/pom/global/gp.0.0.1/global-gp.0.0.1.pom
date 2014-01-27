@@ -45,7 +45,7 @@
 		<!-- Remote Repository -->
 		<cyk.artifact.repository.remote.id>remoterep</cyk.artifact.repository.remote.id>
 		<cyk.artifact.repository.remote.name>CYK Remote Artifact Repository</cyk.artifact.repository.remote.name>
-		<cyk.artifact.repository.remote.url>https://github.com/devlopper/_repository.artifact.org.cyk.git</cyk.artifact.repository.remote.url>
+		<cyk.artifact.repository.remote.url>https://github.com/devlopper/_repository.artifact.org.cyk/raw/master</cyk.artifact.repository.remote.url>
 
 	</properties>
 
@@ -63,11 +63,11 @@
 			<name>${cyk.artifact.repository.name}</name>
 			<url>${cyk.artifact.repository.url}</url>
 		</repository-->
-		<repository>
+		<!--repository>
 			<id>${cyk.artifact.repository.remote.id}</id>
 			<name>${cyk.artifact.repository.remote.name}</name>
 			<url>${cyk.artifact.repository.remote.url}</url>
-		</repository>
+		</repository-->
 	</repositories>
 
 	<build>
@@ -101,78 +101,82 @@
 		</plugins>
 	</build>
 
-	<dependencyManagement>
-		<dependencies>
+	<dependencies>
 
-			<!-- Java Enterprise Edition API -->
-			<dependency>
-				<groupId>javax</groupId>
-				<artifactId>javaee-api</artifactId>
-				<version>${javaee.version}</version>
-				<scope>provided</scope>
-			</dependency>
+		<!-- Java Enterprise Edition API -->
+		<dependency>
+			<groupId>javax</groupId>
+			<artifactId>javaee-api</artifactId>
+			<version>${javaee.version}</version>
+			<scope>provided</scope>
+		</dependency>
 
-			<!-- Code Utilities -->
-			<dependency>
-				<groupId>org.projectlombok</groupId>
-				<artifactId>lombok</artifactId>
-				<version>${version.lombokproject}</version>
-				<scope>provided</scope>
-			</dependency>
+		<!-- Code Utilities -->
+		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+			<version>${version.lombokproject}</version>
+			<scope>provided</scope>
+		</dependency>
 
-			<!-- Apache Commons -->
-			<dependency>
-				<groupId>org.apache.commons</groupId>
-				<artifactId>commons-lang3</artifactId>
-				<version>3.0</version>
-			</dependency>
-			<dependency>
-				<groupId>commons-io</groupId>
-				<artifactId>commons-io</artifactId>
-				<version>1.4</version>
-			</dependency>
+		<!-- Apache Commons -->
+		<dependency>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-lang3</artifactId>
+			<version>3.0</version>
+		</dependency>
+		<dependency>
+			<groupId>commons-io</groupId>
+			<artifactId>commons-io</artifactId>
+			<version>1.4</version>
+		</dependency>
 
-			<dependency>
-				<groupId>commons-logging</groupId>
-				<artifactId>commons-logging</artifactId>
-				<version>1.1.1</version>
-			</dependency>
+		<dependency>
+			<groupId>commons-logging</groupId>
+			<artifactId>commons-logging</artifactId>
+			<version>1.1.1</version>
+		</dependency>
 
-			<!-- Test -->
-			<dependency>
-				<groupId>org.jboss.arquillian</groupId>
-				<artifactId>arquillian-bom</artifactId>
-				<version>1.1.1.Final</version>
-				<scope>import</scope>
-				<type>pom</type>
-			</dependency>
+		<!-- Test -->
+		<dependency>
+			<groupId>org.jboss.arquillian</groupId>
+			<artifactId>arquillian-bom</artifactId>
+			<version>1.1.1.Final</version>
+			<scope>import</scope>
+			<type>pom</type>
+		</dependency>
 
-			<dependency>
-				<groupId>junit</groupId>
-				<artifactId>junit</artifactId>
-				<version>4.8.1</version>
-				<scope>test</scope>
-			</dependency>
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.8.1</version>
+			<scope>test</scope>
+		</dependency>
 
-			<dependency>
-				<groupId>org.jboss.arquillian.junit</groupId>
-				<artifactId>arquillian-junit-container</artifactId>
-				<version>1.1.2.Final</version>
-				<scope>test</scope>
-			</dependency>
+		<dependency>
+			<groupId>org.jboss.arquillian.junit</groupId>
+			<artifactId>arquillian-junit-container</artifactId>
+			<version>1.1.2.Final</version>
+			<scope>test</scope>
+		</dependency>
 
-			<!-- Validation Implementation -->
-			<dependency>
-				<groupId>org.hibernate</groupId>
-				<artifactId>hibernate-validator</artifactId>
-				<version>5.0.0.Final</version>
-				<scope>test</scope>
-			</dependency>
+		<!-- Validation Implementation -->
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-validator</artifactId>
+			<version>5.0.0.Final</version>
+			<scope>test</scope>
+		</dependency>
 
-		</dependencies>
-	</dependencyManagement>
+	</dependencies>
 
 	<profiles>
+		
+		<profile>
+			<id>development-environment</id>
+			
+		</profile>
+		
 		<profile>
 			<id>arquillian-weld-ee-embedded</id>
 			<dependencies>
