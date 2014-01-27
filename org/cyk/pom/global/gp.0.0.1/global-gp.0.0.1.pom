@@ -57,18 +57,18 @@
 	    </repository>
 	</distributionManagement>
 	
-	<repositories>
-		<!--repository>
+	<!--repositories>
+		<repository>
 			<id>${cyk.artifact.repository.id}</id>
 	        <name>${cyk.artifact.repository.name}</name>
 	        <url>${cyk.artifact.repository.url}</url>
-		</repository-->
+		</repository>
 		<repository>
 			<id>${cyk.artifact.repository.remote.id}</id>
 	        <name>${cyk.artifact.repository.remote.name}</name>
 	        <url>${cyk.artifact.repository.remote.url}</url>
 		</repository>
-	</repositories>	
+	</repositories-->	
 	
 	<build>
 		
